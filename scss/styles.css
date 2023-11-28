@@ -1,0 +1,34 @@
+:root {
+  --bg-color: rgb(246, 237, 237);
+  --zaffre: rgb(60, 34, 255);
+  --glaucous: rgb(123, 147, 226);
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Roboto Condensed";
+  color: white;
+  background-image: linear-gradient(0deg, var(--zaffre), var(--glaucous));
+}
+
+.display-4 {
+  font-weight: 600;
+}
+
+form {
+  border: none !important;
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+#splash {
+  margin-top: 20vh;
+}
+
+.landing-icon {
+  height: 100px;
+  fill: white;
+}
+
+p {
+  font-size: 1.1rem;
+}/*# sourceMappingURL=styles.css.map */

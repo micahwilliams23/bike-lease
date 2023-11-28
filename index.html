@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <title>Harvard Bike Leases</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Anonymous Foods" id="meta-title" />
+    <meta property="og:type" content="website" />
+    <meta property="og:logo" content="/src/assets/logos/icon.svg" />
+    <meta property="og:url" content="" id="meta-url" />
+    <link rel="icon" type="image/svg+xml" href="/img/icons/bike.svg" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto Condensed"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link href="scss/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container-fluid sticky-top">
+      <h5 class="m-0 p-3"><strong> College Bike Leases </strong></h5>
+    </div>
+    <div class="row g-0 justify-content-center d-flex align-items-center">
+      <div class="row justify-content-center" id="splash">
+        <div class="col-11 col-sm-10 col-md-8">
+          <h1 class="display-4 text-center">
+            The best way to buy a new bike...<br />
+            is to lease one
+          </h1>
+          <h4 class="text-center">
+            We'll pair you with a bike you'll love, no strings attached.
+          </h4>
+        </div>
+      </div>
+      <div class="col-10 col-sm-8 col-lg-4 py-3">
+        <h5 class="text-center mb-1">Join the waitlist</h5>
+        <form
+          class="form-control d-flex"
+          id="email-form"
+          action="https://script.google.com/macros/s/AKfycbz7LkjheRswhiOvd3CgNQoUXbS1Pp-lZlTRL7V-ybZdMhZBfZucmr-eXV8Lg_X1iE5MPA/exec"
+        >
+          <input
+            type="email"
+            name="Email"
+            id=""
+            placeholder="Enter email"
+            class="form-control"
+          />
+          <button type="submit" class="btn btn-outline-light ms-2">
+            Submit
+          </button>
+        </form>
+      </div>
+      <div class="d-flex justify-content-center px-1" id="form-message"></div>
+      <!-- <div class="d-flex justify-content-center px-3" id="">
+        Thanks!
+        <img src="img/icons/check.svg" class="success-icon px-2" alt="" />
+      </div> -->
+    </div>
+    <div class="row justify-content-center g-0 py-5 my-5">
+      <div class="col-11 col-md-10">
+        <div class="row justify-content-center">
+          <div class="col-10 col-sm-6 col-lg-3 p-3 justify-content-center">
+            <div class="d-flex justify-content-center py-3">
+              <img src="img/icons/money.svg" class="landing-icon" alt="" />
+            </div>
+            <h3 class="text-center">Save money and stress</h3>
+            <p>
+              Get a great bike for a fraction of the purchase price. Skip the
+              bike shop and find the right bike with just a few clicks.
+            </p>
+          </div>
+          <div class="col-10 col-sm-6 col-lg-3 p-3 justify-content-center">
+            <div class="d-flex justify-content-center py-3">
+              <img src="img/icons/heart.svg" class="landing-icon" alt="" />
+            </div>
+            <h3 class="text-center">Easy, flexible rentals</h3>
+            <p>
+              Lease a bike by the month or year. When you're done with your
+              bike, we'll fix it up and pass it on for someone else to love.
+            </p>
+          </div>
+          <div class="col-10 col-sm-6 col-lg-3 p-3 justify-content-center">
+            <div class="d-flex justify-content-center py-3">
+              <img src="img/icons/tool.svg" class="landing-icon" alt="" />
+            </div>
+            <h3 class="text-center">No maintenance worries</h3>
+            <p>
+              A flat will never slow you down again. We'll take care of the
+              maintenance so that you can always ride a safe, well-tuned bike.
+            </p>
+          </div>
+          <div class="col-10 col-sm-6 col-lg-3 p-3 justify-content-center">
+            <div class="d-flex justify-content-center py-3">
+              <img src="img/icons/theft.svg" class="landing-icon" alt="" />
+            </div>
+            <h3 class="text-center">Fully insured against theft</h3>
+            <p>
+              You're fully protected if your bike gets stolen, but we'll give
+              you have all the tools and knowledge to make sure that doesn't
+              happen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      window.addEventListener("load", function () {
+        const form = document.getElementById("email-form");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          document.getElementById("form-message").innerHTML = `<img
+          src="img/icons/loading-spinner.svg"
+          class="success-icon px-1"
+          alt=""
+        />`;
+          const data = new FormData(form);
+          const action = e.target.action;
+          fetch(action, {
+            method: "POST",
+            body: data,
+          }).then(() => {
+            document.getElementById(
+              "form-message"
+            ).innerHTML = `Thanks!<img src="img/icons/check.svg" class="success-icon px-2" alt="" />`;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
