@@ -21,7 +21,12 @@ form {
 }
 
 #splash {
-  margin-top: 20vh;
+  margin-top: 25vh;
+}
+
+#navbar {
+  position: absolute;
+  top: 0;
 }
 
 .landing-icon {
