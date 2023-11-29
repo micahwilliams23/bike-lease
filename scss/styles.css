@@ -1,14 +1,15 @@
 :root {
   --bg-color: rgb(246, 237, 237);
-  --zaffre: rgb(60, 34, 255);
+  --valencia: #fc9502;
+  --clementine: #f6b65c;
   --glaucous: rgb(123, 147, 226);
 }
 
 body {
   min-height: 100vh;
   font-family: "Roboto Condensed";
-  color: white;
-  background-image: linear-gradient(0deg, var(--zaffre), var(--glaucous));
+  color: #fafafa;
+  background-image: linear-gradient(0deg, var(--valencia), var(--clementine));
 }
 
 .display-4 {
