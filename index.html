@@ -55,7 +55,11 @@
             placeholder="Enter email"
             class="form-control"
           />
-          <button type="submit" class="btn btn-outline-light ms-2">
+          <button
+            type="submit"
+            class="btn btn-outline-light ms-2"
+            id="email-submit"
+          >
             Submit
           </button>
         </form>
@@ -129,7 +133,8 @@
           src="img/icons/loading-spinner.svg"
           class="success-icon px-1"
           alt=""
-        />`;
+          />`;
+          document.getElementById("email-submit").disabled = true;
           const data = new FormData(form);
           const action = e.target.action;
           fetch(action, {
